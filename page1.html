@@ -266,6 +266,127 @@ ul#navigation ul li a {
     
     width:250px;
 }
+
+/* SLIDER */
+.slider * {
+    margin: 0;
+    padding: 0;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.slider {
+	margin-top: 150px;
+    height: 250px;
+    width: 100%;
+    /*box-shadow*/
+    -webkit-box-shadow: 0 0 5px #000;
+    -moz-box-shadow: 0 0 5px #000;
+    box-shadow: 0 0 5px #000;
+}
+.slider .frames {
+    height: 250px;
+    position: relative;
+}
+.slider .frames .slide {
+    height: 250px;
+    list-style: none;
+    position: absolute;
+    width: 100%;
+}
+.slider .slide:target { z-index: 100 }
+.slider .frames .slide img {
+    height: 250px;
+    width: 100%;
+}
+.slider .frames .slide nav a {
+    background: hsla(0,0%,0%,.75);
+    color: #fff;
+    font-size: 16px;
+    line-height: 50px;
+    margin-top: -25px;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    top: 50%;
+    width: 50px;
+    visibility: hidden;
+    z-index: 10;
+}
+.slider:hover .frames .slide nav a {
+    opacity: 1;
+    visibility: visible;
+}
+.slider .frames .slide nav .prev {
+    /*border-radius*/
+    -webkit-border-radius: 0 25px 25px 0;
+    -moz-border-radius: 0 25px 25px 0;
+    border-radius: 0 25px 25px 0;
+    left: 0;
+}
+.slider .frames .slide nav .next {
+    /*border-radius*/
+    -webkit-border-radius: 25px 0 0 25px;
+    -moz-border-radius: 25px 0 0 25px;
+    border-radius: 25px 0 0 25px;
+    right: 0;
+}
+.slider .frames .slide nav a:hover { background: #000 }
+.slider .quicknav {
+    bottom: 0;
+    font-size: 0;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    z-index: 100;
+}
+.slider:hover .quicknav { opacity: .9 }
+.slider .quicknav li { display: inline-block }
+.slider .quicknav a {
+    background: hsla(0,0%,100%,.9);
+    border: 1px solid hsla(0,0%,0%,.9);
+    /*border-radius*/
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    display: block;
+    height: 10px;
+    margin: 10px 5px;
+    text-decoration: none;
+    width: 10px;
+}
+.slider .quicknav a:hover { background: hsla(0,0%,50%,.9) }
+.slider #one:target ~ .quicknav a[href="#one"], .slider #two:target ~ .quicknav a[href="#two"], .slider #three:target ~ .quicknav a[href="#three"], .slider #four:target ~ .quicknav a[href="#four"], .slider #five:target ~ .quicknav a[href="#five"] {
+    background: hsla(0,0%,0%,.9);
+    border-color: hsla(0,0%,100%,.9);
+    background: rgb(244,246,245);
+    /*linear-gradient*/
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(rgba(244,246,245,1),0.01),color-stop(rgba(203,219,219,1),1),color-stop(rgba(216,216,216,1),1));
+    background: -webkit-linear-gradient(top, rgba(244,246,245,1) 1%, rgba(203,219,219,1) 100%, rgba(216,216,216,1) 100%);
+    background: -moz-linear-gradient(top, rgba(244,246,245,1) 1%, rgba(203,219,219,1) 100%, rgba(216,216,216,1) 100%);
+    background: -o-linear-gradient(top, rgba(244,246,245,1) 1%, rgba(203,219,219,1) 100%, rgba(216,216,216,1) 100%);
+    background: linear-gradient(top, rgba(244,246,245,1) 1%, rgba(203,219,219,1) 100%, rgba(216,216,216,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(244,246,245,1)), color-stop(100%,rgba(203,219,219,1)), color-stop(100%,rgba(216,216,216,1)));
+    background: -webkit-linear-gradient(top, rgba(244,246,245,1) 1%,rgba(203,219,219,1) 100%,rgba(216,216,216,1) 100%);
+    background: -moz-linear-gradient(top, rgba(244,246,245,1) 1%,rgba(203,219,219,1) 100%,rgba(216,216,216,1) 100%);
+    background: -o-linear-gradient(top, rgba(244,246,245,1) 1%,rgba(203,219,219,1) 100%,rgba(216,216,216,1) 100%);
+    background: linear-gradient(top, rgba(244,246,245,1) 1%,rgba(203,219,219,1) 100%,rgba(216,216,216,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f6f5', endColorstr='#d8d8d8',GradientType=0 );
+    /*box-shadow*/
+    -webkit-box-shadow: inset 0 0 3px #000,0 0 2px rgba(0,0,0,.5),0 2px 3px #666;
+    -moz-box-shadow: inset 0 0 3px #000,0 0 2px rgba(0,0,0,.5),0 2px 3px #666;
+    box-shadow: inset 0 0 3px #000,0 0 2px rgba(0,0,0,.5),0 2px 3px #666;
+}
+
+.clearfix::after {
+	clear: both;
+	content: '';
+	display: table;
+}
 </style>
 </head>
 
@@ -297,7 +418,7 @@ ul#navigation ul li a {
 <br>
 <img src="kp1.jpg" width="400px" height="80px" style="display: block;margin: auto;">
 <br>
-<nav id="nav">
+<nav id="nav" class="clearfix">
     <ul id="navigation">
         <li id="op1"><a href="iwt21.html">Attraction &raquo;</a>
 	    <ul>
@@ -331,6 +452,54 @@ ul#navigation ul li a {
 	<li id="op7"><a href="iwt4.html">About KOREA</a></li>
     </ul>
 </nav>
-
+<div class="clearfix"></div>
+<div class="slider">
+    <ul class="frames">
+        <li id="one" class="slide">
+            <img src="http://lorempixel.com/450/250/animals" alt="Slide 1">
+            <nav>
+                <a class="prev" href="#five">&larr;</a>
+                <a class="next" href="#two">&rarr;</a>
+            </nav>            
+        </li>
+        <li id="two" class="slide">
+            <img src="http://lorempixel.com/450/250/sports" alt="Slide 2">
+            <nav>
+                <a class="prev" href="#one">&larr;</a>
+                <a class="next" href="#three">&rarr;</a>
+            </nav>            
+        </li>
+        <li id="three" class="slide">
+            <img src="http://lorempixel.com/450/250/nature" alt="Slide 3">
+            <nav>
+                <a class="prev" href="#two">&larr;</a>
+                <a class="next" href="#four">&rarr;</a>
+            </nav>            
+        </li>
+        <li id="four" class="slide">
+            <img src="http://www.lorempixel.com/450/250/food" alt="Slide 4">
+            <nav>
+                <a class="prev" href="#three">&larr;</a>
+                <a class="next" href="#five">&rarr;</a>
+            </nav>            
+        </li>
+        <li id="five" class="slide">
+            <img src="http://lorempixel.com/450/250/animals" alt="Slide 5">
+            <nav>
+                <a class="prev" href="#four">&larr;</a>
+                <a class="next" href="#one">&rarr;</a>
+            </nav>            
+        </li>
+        <li class="quicknav">
+            <ul>
+                <li><a href="#one"></a></li>
+                <li><a href="#two"></a></li>
+                <li><a href="#three"></a></li>
+                <li><a href="#four"></a></li>
+                <li><a href="#five"></a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
 </body>
 </html>
