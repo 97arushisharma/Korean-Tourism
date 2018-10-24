@@ -133,3 +133,294 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color :#FBC02D;}
+
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+   transition: all ease 0.5s;
+
+}
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+  transition: all ease 0.5s;
+
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+#nav {
+  margin:0px;
+  width:100%;
+}
+
+ul#navigation {
+  width:100%;
+  margin:0px;
+  float:left;
+  position: absolute;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+ul#navigation li {
+  display:inline;
+  font-size:20px;
+  font-weight:bold;
+  margin:0;
+  padding:0;
+  position:relative;
+ /* border-top:;
+  border-bottom:2px solid green;*/
+}
+
+ul#navigation li a {
+  padding:10px 25px;
+  color:black;
+  text-decoration:none;
+  display:inline-block;
+  width:150px;
+  background: transparent;
+
+  
+}
+
+ul#navigation li#op1 a:hover {
+  background:#E91E63;
+  color:#ffffff;
+  position: absolute;
+  z-index: 10;
+}
+ul#navigation li#op2 a:hover {
+  background:#FBC02D;
+  color:#ffffff;
+}
+ul#navigation li#op3 a:hover {
+  background:#039BE5;
+  color:#ffffff;
+}
+ul#navigation li#op4 a:hover {
+  background:#F06292;
+  color:#ffffff;
+}
+ul#navigation li#op5 a:hover {
+  background:#EF6C00;
+  color:#ffffff;
+}
+ul#navigation li#op6 a:hover {
+  background:#F44336;
+  color:#ffffff;
+}
+ul#navigation li#op7 a:hover {
+  background:#1565C0;
+  color:#ffffff;
+}
+
+
+/*for navigation menu*/
+
+
+ul#navigation li#op1:hover > a {
+  background:#E91E63;
+}
+ul#navigation li#op2:hover > a {
+  background:#FBC02D;
+}
+ul#navigation li#op3:hover > a {
+  background:#039BE5;
+}
+ul#navigation li#op4:hover > a {
+  background:#F06292;
+}
+ul#navigation li#op5:hover > a {
+  background:#EF6C00;
+}
+ul#navigation li#op6:hover > a {
+  background:#F44336;
+}
+ul#navigation li#op7:hover > a {
+  background:#1565C0;
+}
+
+
+/* Drop-Down Navigation */
+ul#navigation li:hover > ul
+{
+
+  visibility:visible;
+  opacity:1;
+}
+
+ul#navigation ul, ul#navigation ul#op1 li ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  visibility:hidden;
+  opacity:0;
+  position: absolute;
+  
+  width:180px;
+  background:#E91E63;
+  
+
+}
+ul#navigation ul, ul#navigation ul li#op2 ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  visibility:hidden;
+  opacity:0;
+  position: absolute;
+  
+  width:180px;
+  background:#FBC02D;
+  
+
+}
+ul#navigation ul, ul#navigation ul#op3 li ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  visibility:hidden;
+  opacity:0;
+  position: absolute;
+  
+  width:180px;
+  background:#E91E63;
+  
+
+}
+ul#navigation ul, ul#navigation ul#op4 li ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  visibility:hidden;
+  opacity:0;
+  position: absolute;
+  
+  width:180px;
+  background:#E91E63;
+  
+
+}
+ul#navigation ul, ul#navigation ul#op5 li ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  visibility:hidden;
+  opacity:0;
+  position: absolute;
+  
+  width:180px;
+  background:#E91E63;
+  
+
+}
+ul#navigation ul, ul#navigation ul#op6 li ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  visibility:hidden;
+  opacity:0;
+  position: absolute;
+  
+  width:180px;
+  background:#E91E63;
+  
+
+}
+ul#navigation ul, ul#navigation ul#op7 li ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  visibility:hidden;
+  opacity:0;
+  position: absolute;
+  
+  width:180px;
+  background:#E91E63;
+}
+
+ul#navigation ul {
+  top: 43px;
+  left: 1px;
+}
+
+ul#navigation ul li ul {
+  top: 0;
+  left: 181px; /* strong related to width:180px; from above */
+}
+
+ul#navigation ul li {
+  
+  width:100%;
+  border:0 none;
+  border-bottom:1px solid #c9c9c9;
+}
+
+ul#navigation ul li a {
+  background:none;
+  padding:7px 15px;
+  color:#ffffff;
+  
+  
+  display:inline-block;
+  border:0 none;
+  
+  width:250px;
+}
+
+.topnav {
+  background:#E91E63;
+  color:white;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background:#FBC02D;
+  color: black;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  width: 10%;
+  padding: 5px 20px;
+  margin: 8px 8;
+  box-sizing: border-box;
+  font-size: 12px;
+}
