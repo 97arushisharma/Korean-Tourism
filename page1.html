@@ -1,6 +1,7 @@
 <html>
 <head>
 <link rel="shortcut icon" href="icon1.ico" />
+<link rel="stylesheet" href="styles.css" />
 <title>
 Visit-Korea Homepage
 </title>
@@ -233,8 +234,6 @@ ul#navigation ul, ul#navigation ul#op7 li ul {
     
     width:180px;
     background:#E91E63;
-    
-
 }
  
 ul#navigation ul {
@@ -297,40 +296,72 @@ ul#navigation ul li a {
 <br>
 <img src="kp1.jpg" width="400px" height="80px" style="display: block;margin: auto;">
 <br>
-<nav id="nav">
-    <ul id="navigation">
-        <li id="op1"><a href="iwt21.html">Attraction &raquo;</a>
-	    <ul>
-                <li><a href="iwt22.html#snacks">UNESCO World Heritage site</a></li>
-                <li><a href="iwt22.html#si">Hallyu Tourism</a></li>
-	    </ul>
-	</li>
-        <li id="op2"><a href="iwt22.html">Travel &raquo;</a>
-            <ul>
-                <li><a href="iwt22.html#snacks">Snacks</a></li>
-                <li><a href="iwt22.html#si">South Indian</a></li>
-                <li><a href="iwt22.html#sd">Sweet Dishes</a></li>
-                <li><a href="iwt22.html#drinks">Drinks</a></li>
-		<li><a href="iwt22.html#chinese">Chinese</a></li>
-            </ul>
-        </li>
-        <li id="op3"><a href="#">Transportation &raquo;</a>
-            <ul>
-                <li><a href="iwt23.html">Online Billing</a></li>
-                <li><a href="iwt21.html">Cash On Delivery</a></li>
-            </ul>
-        </li>
-        <li id="op4"><a href="iwt31.html">Accomodations</a></li>
-        <li id="op5"><a href="iwt4.html">Food</a></li>
-        <li id="op6"><a href="#">Shopping &raquo;</a>
-		<ul>
-			<li><a href="#">About Us</a></li>
-			<li><a href="https://www.facebook.com/">Find Us Facebook</a></li>
-		</ul>	
-	</li>
-	<li id="op7"><a href="iwt4.html">About KOREA</a></li>
-    </ul>
+
+<nav id="nav" style="text-align: center;">
+    <div class="dropdown">
+        <button class="dropbtn">Attraction</button>
+        <div class="dropdown-content">
+            <a href="iwt22.html#snacks">UNESCO World Heritage site</a>
+            <a href="iwt22.html#si">Hallyu Tourism</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Travel</button>
+        <div class="dropdown-content">
+            <a href="iwt22.html#snacks">Snacks</a>
+            <a href="iwt22.html#si">South Indian</a>
+            <a href="iwt22.html#sd">Sweet Dishes</a>
+            <a href="iwt22.html#drinks">Drinks</a>
+            <a href="iwt22.html#chinese">Chinese</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Transportation</button>
+        <div class="dropdown-content">
+            <a href="iwt23.html">Online Billing</a>
+            <a href="iwt21.html">Cash On Delivery</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Travel</button>
+        <div class="dropdown-content">
+            <a href="iwt31.html">Accomodations</a>
+            <a href="iwt4.html">Food</a>
+            <a href="#">Shopping &raquo;</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">About Us</button>
+        <div class="dropdown-content">
+            <a href="https://www.facebook.com/">Find Us Facebook</a>
+        </div>
+    </div>
 </nav>
+
+<br>
+
+<div class="slideshow-container">
+    <div class="mySlides fade">
+        <img src="img/south-korea.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+        <img src="img/south-korea2.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+        <img src="img/south-korea3.jpg" style="width:100%">
+    </div>        
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+</div>
 
 </body>
 </html>
+
+<script src="script.js"></script>
