@@ -2,6 +2,9 @@
 <head>
 <link rel="shortcut icon" href="image-icons/icon1.ico" />
 <link rel="stylesheet" href="styles.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
 <title>
 Visit-Korea Homepage
 </title>
@@ -95,8 +98,24 @@ Visit-Korea Homepage
         <span class="dot" onclick="currentSlide(3)"></span> 
     </div>
 </div>
-
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+<script>
+// ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+</script>
 </body>
 </html>
 
 <script src="script.js"></script>
+
