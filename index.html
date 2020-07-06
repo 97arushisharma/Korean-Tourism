@@ -6,6 +6,10 @@
 <link rel="stylesheet" href="styles.css" />
 <!-- add the image fav icon for the site -->
 <link rel="icon" type="image/png" href="img/southkoreaimage.png">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
 <title>
 Visit-Korea Homepage
 </title>
@@ -99,9 +103,29 @@ Visit-Korea Homepage
         <span class="dot" onclick="currentSlide(3)"></span> 
     </div>
 </div>
-<!-- Start of bootstrapped code -->
+<
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+<script>
+// ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+</script>
+</body>
+</html>
 
-    
+<script src="script.js"></script>
+
+<!-- Start of bootstrapped code -->    
 
       <!-- FOOTER -->
       
@@ -160,3 +184,4 @@ Visit-Korea Homepage
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+
